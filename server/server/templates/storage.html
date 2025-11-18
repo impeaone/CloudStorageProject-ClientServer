@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Файлы</title>
+    <!-- Подключаем Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    <div class="header">
+        <h1>StorageCloud</h1>
+        <div class="nav">
+            <a href="#">Главная</a>
+            <a href="#">Хранилище</a>
+            <a onclick="exit_to_main()">Выйти</a>
+        </div>
+    </div>
+    <main>
+        <div class="search-box">
+            <h1>Файловое хранилище</h1>
+            <input class="file-input">
+        </div>
+        <div class="files-container">
+            <div class="file">
+                <div class="file-header">
+                    <div class="file-icon"><i>ico</i></div>
+                    <div class="file-name">filename</div>
+                    <div class="file-type">filetype</div>
+                </div>
+                <div class="file-details">
+                    <div class="detail-row">
+                        <p>Автор:</p>
+                        <p>Владосик Красава</p>
+                    </div>
+                    <div class="detail-row">
+                        <p>Дата загрузки:</p>
+                        <p>27.01.2006</p>
+                    </div>
+                    <div class="detail-row">
+                        <p>Размер:</p>
+                        <p>1 ТБ</p>
+                    </div>
+                </div>
+            </div>
+            <div class="file">
+
+            </div>
+        </div>
+    </main>
+<script>
+    const baseURL = localStorage.getItem("baseURL");
+    console.log(baseURL);
+    function exit_to_main() {
+    console.log(123);
+        document.cookie = "apikey=; max-age=0; path=/";
+        window.location.href = baseURL;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal | Вход</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Левая часть - форма входа -->
+    <div class="login-section">
+      <div class="login-div">
+      <div class="logo">CloudStorage</div>
+
+      <form class="login-form" id="form">
+        <div class="form-group">
+          <label for="apikey">API-ключ</label>
+          <input type="password" id="apikey" name="apikey" placeholder="Введите ваш ключ доступа">
+        </div>
+
+        <button type="submit" class="login-button">Войти</button>
+      </form>
+      </div>
+    </div>
+
+    <div class="image-section">
+        <img src="{{ url_for('static', filename='images/main.png') }}">
+    </div>
+  </div>
+  <script>
+    localStorage.setItem("baseURL", window.location.href);
+    document.getElementById('form').addEventListener('submit', function(event){
+        event.preventDefault();
+        const api = document.getElementById('apikey').value;
+        document.cookie = "apikey="+api;
+        location.reload();
+    });
+
+  </script>
+</body>
+</html>

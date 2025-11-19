@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Файлы</title>
-    <!-- Подключаем Font Awesome для иконок -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/storage.css') }}">
 </head>
 <body>
     <div class="header">
         <h1>StorageCloud</h1>
-        <div class="nav">
-            <a href="#">Главная</a>
-            <a href="#">Хранилище</a>
+        <div class="nav-bar">
+            <a >Главная</a>
+            <a >Хранилище</a>
             <a onclick="exit_to_main()">Выйти</a>
         </div>
     </div>
@@ -21,6 +19,7 @@
         <div class="search-box">
             <h1>Файловое хранилище</h1>
             <input class="file-input">
+            <button>s</button>
         </div>
         <div class="files-container">
             <div class="file">

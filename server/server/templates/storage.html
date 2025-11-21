@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.cloudflare.com/packages/cloudflare-fonts/1.0.0/cloudflare-fonts.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <link rel="stylesheet" href="{{ url_for('static', filename='css/storage.css') }}">
 </head>
 <body>
@@ -19,32 +21,50 @@
         <div class="search-box">
             <h1>Файловое хранилище</h1>
             <input class="file-input">
-            <button>s</button>
+            <button>🔍</button>
         </div>
         <div class="files-container">
             <div class="file">
                 <div class="file-header">
-                    <div class="file-icon"><i>ico</i></div>
-                    <div class="file-name">filename</div>
-                    <div class="file-type">filetype</div>
+                    <div class="file-icon"><i class="fas fa-file-pdf"></i></div>
+                    <div class="file-name">Как апнуть золото в 2025 году</div>
+                    <div class="file-type">pdf</div>
                 </div>
                 <div class="file-details">
                     <div class="detail-row">
-                        <p>Автор:</p>
-                        <p>Владосик Красава</p>
+                        <p class="detail-label">Автор:</p>
+                        <p class="detail-value">Владислав</p>
                     </div>
                     <div class="detail-row">
-                        <p>Дата загрузки:</p>
-                        <p>27.01.2006</p>
+                        <p class="detail-label">Дата загрузки:</p>
+                        <p class="detail-value">21.11.2025</p>
                     </div>
                     <div class="detail-row">
-                        <p>Размер:</p>
-                        <p>1 ТБ</p>
+                        <p class="detail-label">Размер:</p>
+                        <p class="detail-value">1 КБ</p>
                     </div>
                 </div>
             </div>
             <div class="file">
-
+                <div class="file-header">
+                    <div class="file-icon"><i class="fas fa-file-word"></i></div>
+                    <div class="file-name">Как построить ферму ядовитой картошки</div>
+                    <div class="file-type">pdf</div>
+                </div>
+                <div class="file-details">
+                    <div class="detail-row">
+                        <p class="detail-label">Автор:</p>
+                        <p class="detail-value">Дмитрий</p>
+                    </div>
+                    <div class="detail-row">
+                        <p class="detail-label">Дата загрузки:</p>
+                        <p class="detail-value">27.11.2025</p>
+                    </div>
+                    <div class="detail-row">
+                        <p class="detail-label">Размер:</p>
+                        <p class="detail-value">1 ТБ</p>
+                    </div>
+                </div>
             </div>
         </div>
     </main>

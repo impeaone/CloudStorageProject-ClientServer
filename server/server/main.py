@@ -1,7 +1,8 @@
+import asyncio
 import os
 
+from server.server.database.database import init_db, test_basic_connection
 from validations import validate_api
-
 from flask import Flask, request, jsonify, render_template, redirect
 
 app = Flask(__name__)
@@ -27,6 +28,7 @@ def login():
 @app.route('/<api>/v1/storage')
 def storage(api: str):
     if not validate_api(api):
+        # TODO: тут кароч надо убирать куки "apikey" и перенаправлять на главную, и выводить flash сообщение
         return jsonify({
             "message": "Access forbidden"
         }, 403)
@@ -36,5 +38,5 @@ def main():
     pass
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(test_basic_connection())
     app.run(host="0.0.0.0", port=80, debug=True)
